@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\SingletonController;
+use App\Http\Controllers\FactoryController;
+use App\Http\Controllers\FacadeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +16,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [SingletonController::class, 'index']);
+Route::get('/facade', [FacadeController::class, 'commander']);
+Route::get('/voiture/{model}', [FactoryController::class, 'index']);
+
+// Route::get('/voiture/{model}', ['as' => 'voiture.model', 'uses' => 'FactoryController@index']);
+
+##Calling Route:##
+// route('voiture.model',[$model]);

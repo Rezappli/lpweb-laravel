@@ -21,9 +21,9 @@
         </style>
     </head>
     <body class="antialiased">
-       <h1>{{$a->incrementCount()}}</h1>
-       <h1>{{$b->incrementCount()}}</h1>
-       <h1>{{$a->incrementCount()}}</h1>
+       <h1>{{$usine}}</h1>
+       <h1>{{$concession}}</h1>
+       <h1>{{$facture}}</h1>
        
     </body>
 </html>

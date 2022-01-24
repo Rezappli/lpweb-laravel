@@ -21,9 +21,7 @@
         </style>
     </head>
     <body class="antialiased">
-       <h1>{{$a->incrementCount()}}</h1>
-       <h1>{{$b->incrementCount()}}</h1>
-       <h1>{{$a->incrementCount()}}</h1>
+       <h1>{{$result}}</h1>
        
     </body>
 </html>
