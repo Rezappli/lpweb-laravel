@@ -10,21 +10,9 @@ class Opel extends Voiture
 {
     use HasFactory;
 
-    private String $marque = "Opel";
-    private int $vitesse = 2999;
-    private int $cv = 90;
-
-    function getMarque(){
-        return $this->marque;
+    public function __construct()
+    {
+        $this->price = 1000;
     }
-
-    function getVitesse(){
-        return $this->vitesse;
-    }
-
-    function getCv(){
-        return $this->cv;
-    }
-
 
 }

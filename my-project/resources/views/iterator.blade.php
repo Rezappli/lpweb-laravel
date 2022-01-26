@@ -21,10 +21,21 @@
         </style>
     </head>
     <body class="antialiased">
-       <h1>{{$usine}}</h1>
-       <h1>{{$concession}}</h1>
-       <h1>{{$facture}}</h1>
-       <h1>Prix : {{$price}}</h1>
+        <table>
+            <tbody>
+            <?php 
+                while($iterator->hasNext()){
+                    echo '
+                    <tr>
+                        <td>
+                        ' .get_class($iterator->next()) .'
+                        </td>
+                    </tr>';
+                }
+            
+            ?>
+            </tbody>
+        </table>
        
     </body>
 </html>

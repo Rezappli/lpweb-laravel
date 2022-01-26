@@ -10,17 +10,13 @@ class Facture extends Model
 {
     use HasFactory;
 
-    static private Voiture $voitures;
+    public int $montant = 0;
 
-    public function __construct($voitures){
-        $this->voitures = $voitures;
+    public function __construct(){
+     
     }
 
-    public function getPrice(){
-        $price = 0;
-        foreach ($voitures as $key => $value) {
-            $price += $voitures->getPrice();
-        }
-        return $price;
+    public function add(Voiture $voiture){
+        $this->montant += $voiture->getPrice();
     }
 }

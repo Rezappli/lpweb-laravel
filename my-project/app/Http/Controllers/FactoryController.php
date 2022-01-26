@@ -12,7 +12,7 @@ class FactoryController extends Controller
         $a = new VoitureFactory();
         
         return view('factory',
-        ['result'=>$a->make($model)]);
+        ['result'=>get_class($a->make($model))]);
         
     }
 }

@@ -4,8 +4,9 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Iterator;
 
-class Concession extends Model
+class Concession extends Model 
 {
     use HasFactory;
 
@@ -17,5 +18,9 @@ class Concession extends Model
 
     public function getCars(){
         return $this->cars;
+    }
+
+    public function getIterator(){
+        return new Iterator($this->cars);
     }
 }

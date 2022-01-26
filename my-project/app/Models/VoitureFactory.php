@@ -20,9 +20,9 @@ class VoitureFactory extends Model
         // return $this->car = new Opel();
 
         if(strtolower($model) == 'renault')
-            return get_class(new Renault());
+            return new Renault();
         else if(strtolower($model) == 'opel')
-            return get_class(new Opel());
+            return new Opel();
         else 
             return null;
     }

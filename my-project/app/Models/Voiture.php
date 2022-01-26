@@ -9,15 +9,7 @@ abstract class Voiture extends Model
 {
     use HasFactory;
 	
-    private String $marque;
-    private String $vitesse;
-    private String $cv;
-    private int $price; 
-
-    abstract function getMarque();
-    abstract function getVitesse();
-    abstract function getCv();
-
+    protected int $price = 0; 
     protected $car;
   
     public function __construct()
@@ -29,5 +21,8 @@ abstract class Voiture extends Model
         $this->car->make($model);
     }
 
+    public function getPrice(){
+        return $this->price;
+    }
 
 }

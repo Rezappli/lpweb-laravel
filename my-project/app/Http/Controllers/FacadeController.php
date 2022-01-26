@@ -17,12 +17,16 @@ class FacadeController extends Controller
         $renault = $factory->make('renault');
 
         $concession = new Concession();
+        $facture = new Facture();
+
+        $facture->add($opel);
+        $facture->add($renault);
+        
         $concession->addCar($opel);
         $concession->addCar($renault);
 
-        $facture = new Facture($concession->getCars());
         
         return view('facade',
-        ['usine'=>get_class($factory), 'concession'=>get_class($concession), 'facture'=>get_class($facture)]); 
+        ['usine'=>get_class($factory), 'concession'=>get_class($concession), 'facture'=>get_class($facture), 'price'=>$facture->montant]); 
     }
 }

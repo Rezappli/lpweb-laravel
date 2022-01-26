@@ -15,16 +15,20 @@
         </style>
 
         <style>
-            body {
+             body {
                 font-family: 'Nunito', sans-serif;
             }
         </style>
     </head>
     <body class="antialiased">
-       <h1>{{$usine}}</h1>
-       <h1>{{$concession}}</h1>
-       <h1>{{$facture}}</h1>
-       <h1>Prix : {{$price}}</h1>
-       
+        @foreach($sujet->observeurs as $obs)
+            <h1> {{$obs->display() }}</h1>
+        @endforeach
+
+        {{$sujet->notify()}}
+
+        @foreach($sujet->observeurs as $obs)
+            <h1> {{$obs->display() }}</h1>
+        @endforeach
     </body>
 </html>

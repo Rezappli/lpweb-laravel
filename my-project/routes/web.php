@@ -4,6 +4,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SingletonController;
 use App\Http\Controllers\FactoryController;
 use App\Http\Controllers\FacadeController;
+use App\Http\Controllers\IteratorController;
+use App\Http\Controllers\ObserveurController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -18,6 +21,8 @@ use App\Http\Controllers\FacadeController;
 
 Route::get('/', [SingletonController::class, 'index']);
 Route::get('/facade', [FacadeController::class, 'commander']);
+Route::get('/iterator', [IteratorController::class, 'index']);
+Route::get('/observeur', [ObserveurController::class, 'index']);
 Route::get('/voiture/{model}', [FactoryController::class, 'index']);
 
 // Route::get('/voiture/{model}', ['as' => 'voiture.model', 'uses' => 'FactoryController@index']);
