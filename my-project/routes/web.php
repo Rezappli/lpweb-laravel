@@ -6,6 +6,8 @@ use App\Http\Controllers\FactoryController;
 use App\Http\Controllers\FacadeController;
 use App\Http\Controllers\IteratorController;
 use App\Http\Controllers\ObserveurController;
+use App\Http\Controllers\StrategieController;
+use App\Http\Controllers\TemplateController;
 
 
 /*
@@ -23,6 +25,8 @@ Route::get('/', [SingletonController::class, 'index']);
 Route::get('/facade', [FacadeController::class, 'commander']);
 Route::get('/iterator', [IteratorController::class, 'index']);
 Route::get('/observeur', [ObserveurController::class, 'index']);
+Route::get('/strategie', [StrategieController::class, 'index']);
+Route::get('/template', [TemplateController::class, 'index']);
 Route::get('/voiture/{model}', [FactoryController::class, 'index']);
 
 // Route::get('/voiture/{model}', ['as' => 'voiture.model', 'uses' => 'FactoryController@index']);
