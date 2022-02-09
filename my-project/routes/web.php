@@ -10,6 +10,7 @@ use App\Http\Controllers\StrategieController;
 use App\Http\Controllers\TemplateController;
 use App\Http\Controllers\CompositeController;
 use App\Http\Controllers\ChainOfResponsabilityController;
+use App\Http\Controllers\StateController;
 
 
 /*
@@ -30,6 +31,7 @@ Route::get('/observeur', [ObserveurController::class, 'index']);
 Route::get('/strategie', [StrategieController::class, 'index']);
 Route::get('/template', [TemplateController::class, 'index']);
 Route::get('/composite', [CompositeController::class, 'index']);
+Route::get('/state', [StateController::class, 'index']);
 Route::get('/chain', [ChainOfResponsabilityController::class, 'index']);
 Route::get('/voiture/{model}', [FactoryController::class, 'index']);
 
