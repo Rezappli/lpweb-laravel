@@ -4,8 +4,10 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use  App\Models\Composite;
 
-abstract class Voiture extends Model
+
+abstract class Voiture extends Model implements Composite
 {
     use HasFactory;
 	
@@ -24,5 +26,11 @@ abstract class Voiture extends Model
     public function getPrice(){
         return $this->price;
     }
+
+    public function setPrice($price){
+        $this->price = $price;
+    }
+
+
 
 }
